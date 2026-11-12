@@ -5,7 +5,7 @@ describe('PROJECTS', () => {
     const numbers = PROJECTS.map((project) => project.number);
 
     expect(new Set(numbers).size).toBe(PROJECTS.length);
-    expect(PROJECTS.length).toBe(4);
+    expect(PROJECTS.length).toBe(5);
     for (const project of PROJECTS) {
       expect(project.repositoryUrl).toMatch(/^https:\/\/github\.com\//);
       expect(project.appUrl).toMatch(/^https:\/\/.+\.github\.io\//);

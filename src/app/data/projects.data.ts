@@ -49,4 +49,19 @@ export const PROJECTS: readonly Project[] = [
     repositoryUrl: 'https://github.com/Felipe-Marulanda/Uceva-Deno-Design-Patterns',
     appUrl: 'https://felipe-marulanda.github.io/Uceva-Deno-Design-Patterns/',
   },
+  {
+    number: '05',
+    title: 'Uceva Pipeline App',
+    category: 'Laboratorio CI/CD',
+    description:
+      'Aplicación Angular del laboratorio de pipelines de la UCEVA, con vistas de inicio, acerca de y contacto, y navegación por hash.',
+    technologies: ['Angular', 'TypeScript', 'Vitest', 'GitHub Actions'],
+    highlights: [
+      'Sin backend obligatorio',
+      'Hash routing para GitHub Pages',
+      'Build y pruebas automatizados',
+    ],
+    repositoryUrl: 'https://github.com/Felipe-Marulanda/Uceva-Pipeline-App',
+    appUrl: 'https://felipe-marulanda.github.io/Uceva-Pipeline-App/',
+  },
 ];

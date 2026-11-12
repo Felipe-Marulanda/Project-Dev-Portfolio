@@ -7,7 +7,7 @@ describe('ProjectsPageComponent', () => {
     const fixture = TestBed.createComponent(ProjectsPageComponent);
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelectorAll('app-project-card').length).toBe(4);
+    expect(fixture.nativeElement.querySelectorAll('app-project-card').length).toBe(5);
     expect(fixture.nativeElement.textContent).toContain('Storage Manager');
   });
 });
