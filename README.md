@@ -1,6 +1,6 @@
 # Dev Portfolio
 
-Portafolio digital de Juan Felipe Castro Marulanda, estudiante de Ingeniería de Sistemas en la UCEVA. Presenta su perfil, habilidades y proyectos en una aplicación Angular standalone publicada en GitHub Pages.
+Portafolio digital de Juan Felipe Castro Marulanda, estudiante de Ingeniería de Sistemas en la UCEVA. Presenta su perfil, habilidades y proyectos en una aplicación Angular standalone preparada para GitHub Pages.
 
 ## Tecnologías
 
@@ -33,7 +33,7 @@ La aplicación de desarrollo se sirve en `http://localhost:4200/`.
 
 ## Publicación
 
-- Aplicación: <https://felipe-marulanda.github.io/Project-Dev-Portfolio/>
+- URL de GitHub Pages configurada: <https://felipe-marulanda.github.io/Project-Dev-Portfolio/>
 - Repositorio: <https://github.com/Felipe-Marulanda/Project-Dev-Portfolio>
 
 El workflow `.github/workflows/deploy.yml` ejecuta las pruebas, construye con el `base-href` del repositorio, publica el artefacto en GitHub Pages y verifica que la URL responda HTTP 200. La salida incluye `404.html` como fallback para las rutas de Angular.
@@ -55,4 +55,4 @@ Se usa Conventional Commits en español o inglés: `feat`, `fix`, `docs`, `test`
 
 ## Proyectos
 
-El catálogo enlaza el repositorio y la app publicada de cada proyecto. Storage Manager es una demostración de APIs del navegador; los enlaces de los demás proyectos quedan listos para sus despliegues correspondientes.
+El catálogo enlaza el repositorio y la URL de Pages prevista para cada proyecto. Storage Manager es una demostración de APIs del navegador; sus despliegues se completarán cuando GitHub Actions esté disponible.

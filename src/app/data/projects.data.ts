@@ -6,7 +6,7 @@ export const PROJECTS: readonly Project[] = [
     title: 'Dev Portfolio',
     category: 'Portafolio personal',
     description:
-      'Catálogo digital de proyectos y perfil profesional, construido como una aplicación Angular accesible y publicada en GitHub Pages.',
+      'Catálogo digital de proyectos y perfil profesional, construido como una aplicación Angular accesible y preparada para GitHub Pages.',
     technologies: ['Angular', 'TypeScript', 'SCSS', 'GitHub Actions'],
     highlights: ['Diseño adaptable', 'Componentes standalone', 'Despliegue automatizado'],
     repositoryUrl: 'https://github.com/Felipe-Marulanda/Project-Dev-Portfolio',
@@ -28,12 +28,12 @@ export const PROJECTS: readonly Project[] = [
     title: 'Taller Clean Architecture',
     category: 'Arquitectura de software',
     description:
-      'Taller con un cliente Angular y backends equivalentes en Node.js y Spring Boot para los módulos de órdenes, categorías y publicaciones.',
+      'Cliente Angular con datos locales de demostración para órdenes, categorías y publicaciones; Node.js y Spring Boot quedan como backends opcionales.',
     technologies: ['Angular', 'TypeScript', 'Node.js', 'Spring Boot'],
     highlights: [
       'Separación por capas',
       'Contratos compartidos',
-      'Adaptable a datos de demostración',
+      'Datos locales sin backend',
     ],
     repositoryUrl: 'https://github.com/Felipe-Marulanda/Taller-Clean-Architecture',
     appUrl: 'https://felipe-marulanda.github.io/Taller-Clean-Architecture/',
@@ -45,7 +45,7 @@ export const PROJECTS: readonly Project[] = [
     description:
       'Colección de ejercicios TypeScript ejecutables con Deno que aplica patrones creacionales, estructurales y de comportamiento.',
     technologies: ['Deno', 'TypeScript', 'Patrones de diseño'],
-    highlights: ['10 ejemplos prácticos', 'Ejercicios independientes', 'Sin servicios externos'],
+    highlights: [    '24 ejemplos prácticos', 'Ejercicios independientes', 'Sin servicios externos'],
     repositoryUrl: 'https://github.com/Felipe-Marulanda/Uceva-Deno-Design-Patterns',
     appUrl: 'https://felipe-marulanda.github.io/Uceva-Deno-Design-Patterns/',
   },
