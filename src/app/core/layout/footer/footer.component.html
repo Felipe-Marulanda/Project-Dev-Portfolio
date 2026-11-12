@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <a class="footer-brand" href="#contenido">{{ profile.name }}<span>.</span></a>
+    <p>{{ profile.institution }} · {{ profile.location }}</p>
+    <div class="footer-links" aria-label="Enlaces de contacto">
+      <a [href]="profile.links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a [href]="profile.links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a [href]="'mailto:' + profile.email">Correo</a>
+      <a [href]="profile.links.whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+    <small>© {{ currentYear }} · Hecho en Tuluá, Colombia</small>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+<header class="site-header">
+  <nav class="site-nav wrap" aria-label="Navegación principal">
+    <a class="brand" routerLink="/" aria-label="Inicio, Juan Felipe Castro Marulanda">
+      <span class="brand__mark">FC</span>
+      <span class="brand__name">Dev Portfolio<span>.</span></span>
+    </a>
+    <div class="site-nav__links">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+        >Inicio</a
+      >
+      <a routerLink="/projects" routerLinkActive="is-active">Proyectos</a>
+      <a routerLink="/about" routerLinkActive="is-active">Perfil</a>
+      <a class="nav-contact" routerLink="/about" fragment="contact"
+        >Contacto <span aria-hidden="true">↗</span></a
+      >
+      <button
+        class="theme-toggle"
+        type="button"
+        (click)="toggleTheme()"
+        [attr.aria-label]="darkMode() ? 'Activar tema claro' : 'Activar tema oscuro'"
+        [attr.aria-pressed]="darkMode()"
+      >
+        @if (darkMode()) {
+          <span aria-hidden="true">☼</span>
+        } @else {
+          <span aria-hidden="true">◐</span>
+        }
+      </button>
+    </div>
+  </nav>
+</header>

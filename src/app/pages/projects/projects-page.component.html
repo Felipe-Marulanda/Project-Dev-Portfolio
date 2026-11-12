@@ -1,0 +1,36 @@
+<section class="page-hero wrap">
+  <p class="section-kicker">PROYECTOS / 2026</p>
+  <div class="page-hero__row">
+    <h1>Trabajo en <span>progreso.</span></h1>
+    <p>Experimentos, herramientas y aprendizajes construidos proyecto a proyecto.</p>
+  </div>
+  <div class="catalog-meta">
+    <span
+      ><strong>{{ projects.length.toString().padStart(2, '0') }}</strong> proyectos en
+      catálogo</span
+    >
+    <span>Repositorio y demo por proyecto</span>
+  </div>
+</section>
+
+<section class="section wrap catalog" aria-label="Catálogo de proyectos">
+  @if (projects.length === 0) {
+    <p class="empty-state">Pronto encontrarás proyectos en este catálogo.</p>
+  } @else {
+    <div class="project-grid">
+      @for (project of projects; track project.number) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  }
+</section>
+
+<section class="catalog-note">
+  <div class="wrap catalog-note__inner">
+    <span class="catalog-note__mark" aria-hidden="true">+</span>
+    <p>
+      Este catálogo sigue creciendo. Cada proyecto enlaza su código fuente y su experiencia
+      publicada.
+    </p>
+  </div>
+</section>

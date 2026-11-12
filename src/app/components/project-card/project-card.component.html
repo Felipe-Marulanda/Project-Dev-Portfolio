@@ -1,0 +1,26 @@
+<article class="project-card">
+  <div class="project-card__topline">
+    <span class="project-card__number">{{ project().number }}</span>
+    <span class="project-card__category">{{ project().category }}</span>
+  </div>
+  <h3>{{ project().title }}</h3>
+  <p class="project-card__description">{{ project().description }}</p>
+  <ul class="project-card__highlights" aria-label="Características principales">
+    @for (highlight of project().highlights; track highlight) {
+      <li>{{ highlight }}</li>
+    }
+  </ul>
+  <ul class="tag-list" aria-label="Tecnologías">
+    @for (technology of project().technologies; track technology) {
+      <li class="tag">{{ technology }}</li>
+    }
+  </ul>
+  <div class="project-card__links">
+    <a [href]="project().repositoryUrl" target="_blank" rel="noopener noreferrer">
+      Repositorio <span aria-hidden="true">↗</span>
+    </a>
+    <a [href]="project().appUrl" target="_blank" rel="noopener noreferrer">
+      Ver app <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>

@@ -1,0 +1,118 @@
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero__copy">
+    <p class="eyebrow"><span class="status-dot"></span> {{ profile.location }}</p>
+    <h1 id="hero-title">Hola, soy <span>Juan Felipe</span>.<br />Construyo para la web.</h1>
+    <p class="hero__lead">
+      Estudiante de Ingeniería de Sistemas en la UCEVA, interesado en crear experiencias digitales
+      útiles y soluciones con una base técnica sólida.
+    </p>
+    <div class="hero__actions">
+      <a class="button button--primary" routerLink="/projects"
+        >Explorar proyectos <span aria-hidden="true">↓</span></a
+      >
+      <a class="button button--quiet" [href]="'mailto:' + profile.email"
+        >Hablemos <span aria-hidden="true">↗</span></a
+      >
+    </div>
+    <div class="hero__meta">
+      <span class="meta-label">ENFOQUE ACTUAL</span>
+      <span>Desarrollo web · Arquitectura · PhishGuard</span>
+    </div>
+  </div>
+  <aside class="hero-card" aria-label="Resumen profesional">
+    <div class="hero-card__top">
+      <span>PERFIL / 001</span>
+      <span class="hero-card__indicator">DISPONIBLE PARA CONECTAR</span>
+    </div>
+    <div class="hero-card__monogram" aria-hidden="true">FC<span>.</span></div>
+    <p class="hero-card__name">Juan Felipe<br />Castro Marulanda</p>
+    <p class="hero-card__role">{{ profile.role }} · {{ profile.institution }}</p>
+    <div class="hero-card__rule"></div>
+    <div class="hero-card__bottom">
+      <span>VALLE DEL CAUCA</span>
+      <span>CO · 2026</span>
+    </div>
+    <span class="hero-card__orb hero-card__orb--one" aria-hidden="true"></span>
+    <span class="hero-card__orb hero-card__orb--two" aria-hidden="true"></span>
+  </aside>
+</section>
+
+<section class="intro-band">
+  <div class="wrap intro-band__inner">
+    <p class="section-kicker">01 / PERFIL</p>
+    <p class="intro-band__text">{{ profile.shortBio }}</p>
+    <a class="text-link" routerLink="/about"
+      >Conoce más sobre mí <span aria-hidden="true">↗</span></a
+    >
+  </div>
+</section>
+
+<section class="section wrap" aria-labelledby="skills-title">
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">02 / HERRAMIENTAS</p>
+      <h2 id="skills-title">Tecnologías con las que trabajo</h2>
+    </div>
+    <p class="section-heading__aside">Un conjunto en evolución, elegido según el problema.</p>
+  </div>
+  <div class="skills-grid">
+    @for (skill of skills; track skill.name) {
+      <app-skill-badge [skill]="skill" />
+    }
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="wrap featured">
+    <div class="featured__copy">
+      <p class="section-kicker">03 / EN FOCO</p>
+      <p class="featured__number">{{ featuredProject.number }} <span>— PROYECTO DESTACADO</span></p>
+      <h2>{{ featuredProject.title }}</h2>
+      <p>{{ featuredProject.description }}</p>
+      <a class="text-link" routerLink="/projects"
+        >Ver catálogo completo <span aria-hidden="true">↗</span></a
+      >
+    </div>
+    <div class="featured__visual" aria-hidden="true">
+      <div class="browser-bar"><i></i><i></i><i></i><span>storage-manager / browser-api</span></div>
+      <div class="code-window">
+        <p><span>01</span> const <b>storage</b> = new LocalStorageService();</p>
+        <p><span>02</span> storage.set(<em>'profile'</em>, data);</p>
+        <p><span>03</span> storage.get(<em>'profile'</em>);</p>
+        <div class="code-window__result"><span>●</span> Persistido en el navegador</div>
+      </div>
+      <span class="visual-stamp">SIN<br />BACKEND</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap project-preview" aria-labelledby="projects-title">
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">04 / TRABAJO SELECCIONADO</p>
+      <h2 id="projects-title">Ideas llevadas a código</h2>
+    </div>
+    <a class="text-link" routerLink="/projects"
+      >Ver {{ projectCount }} proyectos <span aria-hidden="true">↗</span></a
+    >
+  </div>
+  <div class="project-preview__list">
+    @for (project of [featuredProject]; track project.number) {
+      <div class="project-preview__item">
+        <span>{{ project.number }}</span>
+        <div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.category }}</p>
+        </div>
+        <p>{{ project.technologies.join(' · ') }}</p>
+        <a
+          [href]="project.appUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="'Ver app de ' + project.title"
+          >↗</a
+        >
+      </div>
+    }
+  </div>
+</section>

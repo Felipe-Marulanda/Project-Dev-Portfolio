@@ -1,0 +1,80 @@
+<section class="page-hero wrap">
+  <p class="section-kicker">PERFIL / SOBRE MÍ</p>
+  <div class="page-hero__row">
+    <h1>Aprender, construir<br /><span>y compartir.</span></h1>
+    <p>
+      {{ profile.role }} en {{ profile.institution }}, con interés en desarrollo web y diseño de
+      software.
+    </p>
+  </div>
+</section>
+
+<section class="section wrap about-layout">
+  <div class="about-copy">
+    <p class="section-kicker">UNA NOTA PERSONAL</p>
+    <h2>Hola, soy Juan Felipe.</h2>
+    <p>{{ profile.fullBio }}</p>
+    <div class="about-focus">
+      <span class="about-focus__index">FOCO / 01</span>
+      <div>
+        <h3>PhishGuard</h3>
+        <p>Proyecto de grado enfocado en la detección de phishing.</p>
+      </div>
+    </div>
+  </div>
+  <aside class="about-skills" aria-labelledby="stack-title">
+    <p class="section-kicker">STACK EN CONSTRUCCIÓN</p>
+    <h2 id="stack-title">Tecnologías</h2>
+    @for (category of categories; track category) {
+      <div class="skill-group">
+        <h3>{{ category }}</h3>
+        <div class="skills-grid">
+          @for (skill of skillsFor(category); track skill.name) {
+            <app-skill-badge [skill]="skill" />
+          }
+        </div>
+      </div>
+    }
+  </aside>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="wrap contact">
+    <div>
+      <p class="section-kicker">HABLEMOS</p>
+      <h2>¿Tienes una idea<br />o una oportunidad?</h2>
+      <p class="contact__location">{{ profile.location }} · {{ profile.institution }}</p>
+    </div>
+    <div class="contact__links">
+      <a class="contact-link contact-link--primary" [href]="'mailto:' + profile.email">
+        <span>Correo electrónico</span><strong>{{ profile.email }}</strong
+        ><span aria-hidden="true">↗</span>
+      </a>
+      <a
+        class="contact-link"
+        [href]="profile.links.github"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>GitHub</span><strong>Felipe-Marulanda</strong><span aria-hidden="true">↗</span>
+      </a>
+      <a
+        class="contact-link"
+        [href]="profile.links.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>LinkedIn</span><strong>Conectemos profesionalmente</strong
+        ><span aria-hidden="true">↗</span>
+      </a>
+      <a
+        class="contact-link"
+        [href]="profile.links.whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>WhatsApp</span><strong>+57 323 473 0922</strong><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
